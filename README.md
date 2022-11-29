@@ -8,8 +8,8 @@ This is a CLI Python program that encrypts a file using both symmetric and assym
 ## How to run
 1. Download the latest release build of the program
 2. Unzip the .zip file to any folder location
-3. 
-4.
+3. ...
+4. ...
 5. Voila, now you can run the program.
 
 ## Step by step guide
@@ -54,4 +54,5 @@ for the private key and public key respectively.
 5.
 
 ### Dependencies
+Python 3.0 >
 `pip install rsa`
