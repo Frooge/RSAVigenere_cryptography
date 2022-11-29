@@ -1,17 +1,17 @@
 import rsa
 
 
-def generate_key_pair():
-    (public_key, private_key) = rsa.newkeys(1024)
-    save_key_file(private_key, "pri.pen")
-    save_key_file(public_key, "pub.pen")
-    print("Successfully generate key pair!")
-
-
 def menu():
-    print("3105 Project Cryptography\n1 : encrypt\n2 : decrypt\n3 : generate rsa key pair\n4 : exit")
+    print("Hybrid Cryptography (RSA and Vigenere)\n1 : encrypt\n2 : decrypt\n3 : generate rsa key pair\n4 : exit")
     choice = input("Choice: ")
     return choice
+
+
+def generate_key_pair():
+    (public_key, private_key) = rsa.newkeys(1024)
+    save_key_file(private_key, "private.pen")
+    save_key_file(public_key, "public.pen")
+    print("Successfully generate key pair!")
 
 
 def save_file(content, file_name, mode):
