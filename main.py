@@ -2,9 +2,9 @@ import rsa
 
 
 def generate_key_pair():
-    (public_key, private_key) = rsa.newkeys(512)
-    save_key_file(private_key, "rsa_pri.bin")
-    save_key_file(public_key, "rsa_pub.bin")
+    (public_key, private_key) = rsa.newkeys(1024)
+    save_key_file(private_key, "pri.pen")
+    save_key_file(public_key, "pub.pen")
     print("Successfully generate key pair!")
 
 
@@ -42,9 +42,11 @@ def open_key_file(key_mode, file_name):
 
 def encrypt():
     file_name = input("Input filename: ")
-    key_file_name = input("Input rsa public key filename: ")
     text = open_file(file_name, 'r')
+    key_file_name = input("Input rsa public key filename: ")
     key = open_key_file("public", key_file_name)
+    keyword = input("Input keyword: ")
+    text = vigenere(text, keyword, 'encrypt')
     cipher = rsa.encrypt(text.encode('utf-8'), key)
     save_file(cipher, file_name, 'wb')
     print("Successfully encrypted file!")
@@ -52,12 +54,27 @@ def encrypt():
 
 def decrypt():
     file_name = input("Input filename: ")
-    key_file_name = input("Input rsa private key filename: ")
     text = open_file(file_name, 'rb')
+    key_file_name = input("Input rsa private key filename: ")
     key = open_key_file("private", key_file_name)
+    keyword = input("Input keyword: ")
     plain = rsa.decrypt(text, key)
-    save_file(plain.decode('utf-8'), file_name, 'w')
+    plain = vigenere(plain.decode('utf-8'), keyword, 'decrypt')
+    save_file(plain, file_name, 'w')
     print("Successfully decrypted file!")
+
+
+def vigenere(text, keyword, mode):
+    converted = list()
+    key_size = len(keyword)
+    if mode == 'encrypt':
+        for idx, c in enumerate(text):
+            converted.append(chr(ord(c) + ord(keyword[idx % key_size])))
+    elif mode == 'decrypt':
+        for idx, c in enumerate(text):
+            converted.append(chr(ord(c) - ord(keyword[idx % key_size])))
+    converted = ''.join(converted)
+    return converted
 
 
 if __name__ == '__main__':
