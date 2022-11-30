@@ -31,28 +31,31 @@ for the private key and public key respectively.
 5. After the process, if both keys are correct, the file with the ciphertext is overwritten with the original text.
 
 
-## Process
+## Algorithms used
 ### RSA keys
-1.
-2.
-3.
-4.
-5.
+* A public key and a private key will be required for the encryption and decryption of files.
+* The public key is used for encrypting a message such that it can only be read by the owner of the private key.
+As such it’s also referred to as the encryption key. Decrypting a message can only be done using the private key, hence it’s also called the decryption key.
+* Generating a key pair may take a long time depending on the number of bits required. In our case, the program uses `1024 bits`. The bits determine the strength of the key, the same as well can be said to the size of the message.
+* After the generation, the keys will be stored in a newly created file called `private.pen` and `public.pen`. You can rename the file to whatever you want.
 
 ### Vigenere cipher
-1.
-2.
-3.
-4.
-5.
+* 
 
 ### RSA cipher
+*
+
+## Process
+### Encryption
 1.
 2.
-3.
-4.
-5.
+
+
+### Decryption
+1.
+2.
+
 
 ### Dependencies
-Python 3.0 >
-`pip install rsa`
+* Python 3.0 >
+* `pip install rsa`
