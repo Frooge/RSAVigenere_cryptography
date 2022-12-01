@@ -6,11 +6,10 @@ This is a CLI Python program that encrypts a file using both symmetric and assym
 * Vigenere (symmeteric cryptography)
 
 ## How to run
-1. Download the latest release build of the program
-2. Unzip the .zip file to any folder location
-3. ...
-4. ...
-5. Voila, now you can run the program.
+1. Clone the repository `https://github.com/Frooge/RSAVigenere_cryptography.git`
+2. Open a terminal and change directory to the cloned folder then `pip install rsa`
+3. Then type `python crypto.py`
+4. Voila, now you can run the program.
 
 ## Step by step guide
 ### Encryption
@@ -64,4 +63,5 @@ As such it’s also referred to as the encryption key. Decrypting a message can 
 
 ### Dependencies
 * Python 3.0 or greater
+* `pip` package installer for python
 * `pip install rsa`
