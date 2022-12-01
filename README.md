@@ -1,7 +1,7 @@
 # Hybrid Cryptography (RSA and Vigenere)
 
 ## Description
-This is a CLI Python program that encrypts a file using both symmetric and assymmetric cryptography and decypts it vice versa.
+This is a CLI Python program that encrypts a file using both symmetric and asymmetric cryptography and decrypts it vice versa.
 * RSA (asymmetric cryptography)
 * Vigenere (symmeteric cryptography)
 
