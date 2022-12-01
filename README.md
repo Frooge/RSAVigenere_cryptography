@@ -40,10 +40,15 @@ As such it’s also referred to as the encryption key. Decrypting a message can 
 * After the generation, the keys will be stored in a newly created file called `private.pen` and `public.pen`. You can rename the file to whatever you want.
 
 ### Vigenere cipher
-* 
+* Vigenere Cipher is a method of encrypting alphabetic text. It is a cipher based on substitution using multiple substitution alphabets.
+* A keyword is required which will be used to encrypt a text and decrypt it vice versa. It is a symmetric cryptography which means it is a two way process.
+* The encryption of the original text is done using the Vigenère square or Vigenère table(columns and rows of alphabet). In this case since python uses UTF-8 by default for its character encoding, so the basis of the Vigenère square will be UTF-8 which consists of 8-bit code units.
+* To encrypt, pick a letter in the plaintext and its corresponding letter in the keyword, use the keyword letter and the plaintext letter as the row index and column index, respectively, and the entry at the row-column intersection is the letter in the ciphertext.
+* Decryption works the same as encryption.
+* To decrypt, pick a letter in the ciphertext and its corresponding letter in the keyword, use the keyword letter to find the corresponding row, and the letter heading of the column that contains the ciphertext letter is the needed plaintext letter.
 
 ### RSA cipher
-*
+* 
 
 ## Process
 ### Encryption
