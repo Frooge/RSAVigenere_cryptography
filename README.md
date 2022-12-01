@@ -2,7 +2,7 @@
 
 ## Description
 This is a CLI Python program that encrypts a file using both symmetric and assymmetric cryptography and decypts it vice versa.
-* RSA (assymmetric cryptography)
+* RSA (asymmetric cryptography)
 * Vigenere (symmeteric cryptography)
 
 ## How to run
@@ -53,7 +53,7 @@ As such it’s also referred to as the encryption key. Decrypting a message can 
 
 ## Process
 ### Encryption
-1.
+1. 
 2.
 
 
