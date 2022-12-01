@@ -49,18 +49,6 @@ As such it’s also referred to as the encryption key. Decrypting a message can 
 * Generating a key pair may take a long time depending on the number of bits required. In our case, the program uses `1024 bits`. The bits determine the strength of the key, the same as well can be said to the size of the message.
 * After the generation, the keys will be stored in a newly created file called `private.pen` and `public.pen`. You can rename the file to whatever you want. 
 
-
-## Process
-### Encryption
-1. 
-2.
-
-
-### Decryption
-1.
-2.
-
-
 ### Dependencies
 * Python 3.0 or greater
 * `pip` package installer for python
