@@ -32,13 +32,6 @@ for the private key and public key respectively.
 
 
 ## Algorithms used
-### RSA keys
-* A public key and a private key will be required for the encryption and decryption of files.
-* The public key is used for encrypting a message such that it can only be read by the owner of the private key.
-As such it’s also referred to as the encryption key. Decrypting a message can only be done using the private key, hence it’s also called the decryption key.
-* Generating a key pair may take a long time depending on the number of bits required. In our case, the program uses `1024 bits`. The bits determine the strength of the key, the same as well can be said to the size of the message.
-* After the generation, the keys will be stored in a newly created file called `private.pen` and `public.pen`. You can rename the file to whatever you want.
-
 ### Vigenere cipher
 * Vigenere Cipher is a method of encrypting alphabetic text. It is a cipher based on substitution using multiple substitution alphabets.
 * A keyword is required which will be used to encrypt a text and decrypt it vice versa. It is a symmetric cryptography which means it is a two way process.
@@ -48,7 +41,15 @@ As such it’s also referred to as the encryption key. Decrypting a message can 
 * To decrypt, pick a letter in the ciphertext and its corresponding letter in the keyword, use the keyword letter to find the corresponding row, and the letter heading of the column that contains the ciphertext letter is the needed plaintext letter.
 
 ### RSA cipher
-* 
+* RSA(Rivest-Shamir-Adleman) relies on the practical difficulty of factoring the product of two large prime numbers
+* It is an asymmetric cryptography algorithm. Asymmetric means that it uses two different keys i.e. private key and public key.
+* A public key and a private key will be required for the encryption and decryption of files.
+* The public key is used for encrypting a message such that it can only be read by the owner of the private key.
+As such it’s also referred to as the encryption key. Decrypting a message can only be done using the private key, hence it’s also called the decryption key.
+*  The term "public" which means it should be shared and can be seen by anyone while "private" means that the key should be kept private.
+* Generating a key pair may take a long time depending on the number of bits required. In our case, the program uses `1024 bits`. The bits determine the strength of the key, the same as well can be said to the size of the message.
+* After the generation, the keys will be stored in a newly created file called `private.pen` and `public.pen`. You can rename the file to whatever you want. 
+
 
 ## Process
 ### Encryption
@@ -62,5 +63,5 @@ As such it’s also referred to as the encryption key. Decrypting a message can 
 
 
 ### Dependencies
-* Python 3.0 >
+* Python 3.0 or greater
 * `pip install rsa`
